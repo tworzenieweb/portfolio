@@ -4,7 +4,7 @@ parameters:
     database_port:     ~
     database_name:     symfony
     database_user:     root
-    database_password: ~
+    database_password: lukasz.123
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
@@ -13,3 +13,18 @@ parameters:
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    sonata_admin.title:             Tworzenieweb blog
+    sonata_admin.logo_title:        /bundles/tworzeniewebblog/images/logo.png
+    sonata_media.cdn.host:          /uploads/media
+    
+    sonata_news.blog_title:         PHP Experience developer BLOG
+    sonata_news.blog_link:          http://phpe.pl/blog
+    sonata_news.blog_description:   By thoughts about new web technologies
+    sonata_news.salt:               ThisTokenIsNotSoSecretChangeIt
+    sonata_news.comment.emails:     [lukasz.adamczewski@phpe.pl]
+    sonata_news.comment.email_from: blog@phpe.pl
+    
+    
+    knp_disqus.api_key: lWwkU8xehSqB5K5h8tKJ5zsiKC9Cy7oUHcZMmSsMPt6aI3HArGrQ5IiiLzrJg2uh
+    knp_disqus.secret_key: YOUR_SECRET_API_KEY # optional, for SSO auth only

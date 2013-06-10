@@ -1,0 +1,86 @@
+@gradientColor: #0a77d5;
+
+@mainColor: #222;
+
+body {
+    padding-top: 30px;
+    #gradient > .vertical(#444, #dfdfdf);
+
+}
+
+
+.css3-gradient {
+
+#gradient > .vertical(@mainColor, darken(@mainColor, 40%));
+
+}
+
+.css3-gradient-2 {
+
+    #gradient > .vertical(darken(@gradientColor, 10%), @gradientColor);
+}
+
+
+.intro-slogan {
+
+    font-family: "squada-one", serif; 
+    font-weight: normal;
+
+    &:after {
+
+        border-top: 30px solid lighten(@mainColor, 0%);
+        @media (max-width: 767px) { 
+            &:after { border-top: 10px solid lighten(@mainColor, 0%); }
+        }
+
+    }
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+}
+
+.main-wrap .section h3 {
+
+    font-family: "bebas-neue", serif; 
+    font-weight: normal; 
+    letter-spacing: 2px;
+
+    &:after {
+
+        border-top: 15px solid darken(@gradientColor, 40%);
+        @media (max-width: 767px) { 
+            border-top: 10px solid darken(@gradientColor, 40%);
+        }
+    }
+
+    a { color: #fff; }
+
+}
+
+.lazy-loading {
+    
+    background: #fff url(../images/loader.gif) no-repeat 50% 50%;
+
+}
+
+// helper class, will never show up in resulting css
+// will be called as long the index is above 0
+.spacerClass (@index) when (@index > 0 ) {
+
+	(~".spacer-@{index}") {
+		
+		margin-bottom: @index*1px;
+	}
+
+	// next iteration
+	.spacerClass(@index - 5);
+}
+
+// end the loop when index is 0
+.spacerClass (0) {}
+
+
+.spacerClass (50);

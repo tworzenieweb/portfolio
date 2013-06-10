@@ -1,0 +1,6 @@
+knp_disqus:
+    api_key: %knp_disqus.api_key%
+    secret_key: %knp_disqus.secret_key% # optional, for SSO auth only
+    forums:
+        default:
+            shortname: phpexperienceddeveloper

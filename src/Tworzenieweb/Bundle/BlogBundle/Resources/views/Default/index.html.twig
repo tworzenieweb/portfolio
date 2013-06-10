@@ -1,0 +1,146 @@
+{% extends 'TworzeniewebBlogBundle::base.html.twig' %}
+
+
+{% block content %}
+
+    <!-- begin .section-work -->
+    <div class="section section-work section-first row">
+            <h3 class="css3-gradient-2" id="employment-history"><i class="icon-briefcase"></i>Employment History</h3>
+
+                    <div class="section-work-list row-fluid">
+                            <div class="span6 work-item">
+                                <h4>PHP programmer at Polcode<br /><small>2011 &mdash; NOW</small></h4>
+                            The main objective of my work is to provide high quality software for 
+                            <a href="https://www.odesk.com/o/profiles/users/_~01c454ff8e46257de0/" rel="nofollow">Odesk workplace</a> 
+                            clients all around the world (Especially USA, Canada, Germany, UK clients). 
+                            Most project that I was working on were built from scratch based on provided specification or general idea.
+                            To be more specific I am creating applications using Symfony2 or Zend Framework 
+                            but i had also to refactor or enhance already existing code written for example in Kohana, Joomla or even Python.
+                            </div>
+
+                            <div class="span6 work-item">
+                            <h4>Symfony programmer at Estorm<br /><small>2009 &mdash; 2011</small></h4>
+                            I was working with several e-commerce and social websites including dating apps, 
+                            real estate apps and social networks.
+                            Most of projects were accomplished using symfony 1.x framework. 
+                            This projects were build using both Propel and Doctrine ORM's.
+                            I have also used Flex 4 technology for implementing video chatting client. 
+                            It was made using RED5 media server.</div>
+                    </div>		
+
+                    <div class="section-work-list row-fluid">
+                            <div class="span6 work-item">
+                            <h4>PHP programmer at Opexim<br /><small>2008 &mdash; 2009</small></h4>
+                            I was working mainly with Zend Framework. I was responsible for 
+                            exporting module for OsCommerce products used for Onet Zakupy.</div>
+
+                            <div class="span6 work-item">
+                            <h4>Freelancer<br /><small>2005 &mdash; 2008</small></h4>
+                            At the beginning of my professional career I was implementing web applications 
+                            for befriend clients. I was also working on custom CMS and learning new technologies 
+                            and concepts important at first steps.
+                            </div>
+                    </div>						
+    </div>
+    <!-- end .section-work -->	
+
+    <!-- begin .section-education -->
+    <div class="section section-education row">
+            <h3 class="css3-gradient-2"  id="education"><i class="icon-book"></i>Education</h3>
+
+                    <div class="section-education-list row-fluid">
+                            <div class="span6 education-item">
+                            <h4>Technical University of Lodz <br /><small>2010 — 2012</small></h4>
+
+                            <p><small><em>Faculty of Technical Physics, Information Technology and Applied Mathematics</em>. 
+                                Field: Computer Science.<br />
+                                Major in Information Systems in management and E-commerce. </small>
+                            </p>
+                            <p>
+                            I have defended my master thesis in October 2012. The topic of thesis was "<i>Web applications efficiency tuning</i>" and was rated 5 of 5.
+                            Thesis covered in detail the process of maintaining and optimizing existing applications or designing them from scratch using best solutions.
+                            This topic was also related with cloud computing and distributing application logic into individual apps - each with different responsibilities.
+                            </p>
+
+                            </div>
+
+                            <div class="span6 education-item">
+                            <h4>Technical University of Lodz<br /><small>2007 - 2010</small></h4>
+
+                            <p><small><em>Faculty of Technical Physics, Information Technology and Applied Mathematics</em>. 
+                                Field: Computer Science.<br />
+                                Major in Information Systems and Databases. </small>
+                            </p>
+
+                            <p>For bechelor theis I wrote publication about "Creating Web Applications using Symfony framework". 
+                            At the same time I have implemented example app which was school register ready for 3 levels of control - student, teacher, director.
+                            Also app was ready for managing more than one school using multidomain approach.
+                            The thesis was rated 5 of 5.</p>
+                            <p>If You're intrested in details of my work please go to <a href="https://code.google.com/p/class-register/">https://code.google.com/p/class-register/</a>.</p>
+                            </div>
+                    </div>		
+
+
+
+    </div>
+    <!-- end .section-education -->		
+
+    <!-- begin .section-portfolio -->
+    <div class="section section-portfolio row">
+        <h3 class="css3-gradient-2" id="portfolio"><i class="icon-bookmark"></i>Portfolio</h3>
+
+        
+        
+        
+            {%
+set portfolio = [
+{'title': 'Adimur - portofolio site', 'path': 'bundles/tworzeniewebblog/images/shots/adimur.jpg'},
+{'title': 'Polish Network - social website', 'path': 'bundles/tworzeniewebblog/images/shots/pn.jpg', 'link': 'http://polskinetwork.org'},
+{'title': 'Helpme24 Personal Consierge Services', 'path': 'bundles/tworzeniewebblog/images/shots/helpme.jpg', 'link': 'http://helpme24.pl'},
+{'title': 'Scuba diving portfolio site', 'path': 'bundles/tworzeniewebblog/images/shots/nurek.jpg', 'link': 'http://nurkowanie-miodzio.pl'},
+{'title': 'Kindergarden site', 'path': 'bundles/tworzeniewebblog/images/shots/chichotki.jpg'},
+{'title': 'Ewa - Kołobrzeg apartments for summer', 'path': 'bundles/tworzeniewebblog/images/shots/ewa.jpg', 'link': 'http://nadmorze.biz'},
+{'title': 'Goldbanquet', 'path': 'bundles/tworzeniewebblog/images/shots/goldbanquet.jpg', 'link': 'http://goldbanuqet.pl'},
+{'title': 'Kindergarden site', 'path': 'bundles/tworzeniewebblog/images/shots/przedszkole.jpg', 'link': 'http://przedszkole.netarteria.info'},
+{'title': 'Kindergarden site', 'path': 'bundles/tworzeniewebblog/images/shots/przedszkolesp.jpg','link': 'http://przedszkolesp.pl'},
+{'title': 'MP Studio', 'path': 'bundles/tworzeniewebblog/images/shots/mpstudio.jpg', 'link': 'http://m-pstudio.pl'},
+{'title': 'Party Trades', 'path': 'bundles/tworzeniewebblog/images/shots/targiimprez.jpg'},
+{'title': 'Medical Centre Med of Łódź', 'path': 'bundles/tworzeniewebblog/images/shots/medical.jpg'},
+]
+ %}
+<div class="flexslider">
+                  <ul class="slides"> 
+{% for i, site in portfolio %}
+    
+        
+        {% if loop.first or loop.index0 is divisibleby(4) %}
+        <li>
+            {% endif %}
+    {% if loop.index is not divisibleby(2) %}
+                <!-- begin .portfolio-row -->
+        <div class="section-portfolio-row-wrap row-fluid">
+    {% endif %}
+            <div class="portfolio-item-thumbnail span6">
+                    <div data-title="{{ site.title }}" class="portfolio-item-thumbnail-wrap lazy-loading" data-original-title="{{ site.title }}">
+                        <a href="{{ site.link is defined ? site.link : '#'  }}" rel="nofollow" target="blank">
+                            <img src="{{ asset(site.path) }}" /></a>
+                    </div>
+            </div>
+    {% if loop.index is divisibleby(2) or loop.last  %}
+        </div>
+        <!-- end .portfolio-row -->	
+    {% endif %}
+        
+        {% if loop.index is divisibleby(4) or loop.last  %}
+        </li>
+        {% endif %}
+{% endfor %}
+
+        </ul>
+</div>
+        
+    </div>
+    <!-- end .section-portfolio -->
+    {{ render(controller("SonataNewsBundle:Post:archive"), {'strategy': 'hinclude'}) }}
+
+{% endblock %}

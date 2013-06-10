@@ -1,0 +1,55 @@
+{% extends 'TworzeniewebBlogBundle::base.html.twig' %}
+
+
+{% block content %}
+
+
+<div class="section section-blog section-last row">
+
+    <h3 class="css3-gradient-2"><i class="icon-circle"></i>{{ post.title }}</h3>
+
+
+<div class="section-blog-item row-fluid">
+        <div class="blog-item-excerpt">
+            
+                <div class="blog-item-meta pagination-right"><span><i class="icon-calendar"></i><small>{{ post.publicationDateStart | format_date }}</small></span>
+                    </div>	
+                    
+
+                <p>
+                    
+                {{ post.content|raw }}
+                </p>
+        </div>
+        
+                            <div class="sonata-blog-post-tag-list spacer-20">
+                                Tags:
+                        {% for tag in post.tags%}
+                            <a href="{{ url('sonata_news_tag', {'tag': tag.slug} ) }}" class="label">{{ tag.name }}</a>
+                            {% if not loop.last%}, {%endif%}
+                        {% endfor %}
+                    </div>
+        
+        <div class="row-fluid">
+            <div class="span6 pagination-left">
+                {% if previousPost %}
+                <a class="btn btn-mini" href="{{ path('sonata_news_view', { 'permalink': sonata_news_permalink(previousPost) }) }}"><i class="icon icon-chevron-left"></i> Previous post</a>
+                {% endif %}
+                {% if nextPost %}
+                <a class="btn btn-mini" href="{{ path('sonata_news_view', { 'permalink': sonata_news_permalink(nextPost) }) }}"><i class="icon icon-chevron-right"></i> Next Post</a>
+                {% endif %}
+            </div>
+            <div class="span6">
+                <div class="blog-item-meta pagination-right"><span><a href="{{ path('sonata_news_home') }}" class="btn btn-mini btn-success"><i class="icon icon-chevron-up"></i> Go back to posts list</a></span></div>	
+            </div>
+        </div>
+</div>
+    
+    <div class="row-fluid">
+        {{ knp_disqus_render('phpexperienceddeveloper', {'identifier': path(app.request.attributes.get('_route'), 
+        app.request.attributes.get('_route_params')), 'limit': 10}) }}
+        </div>
+                                        
+</div>
+
+{% endblock %}

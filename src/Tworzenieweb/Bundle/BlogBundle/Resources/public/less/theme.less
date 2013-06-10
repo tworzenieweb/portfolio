@@ -1,0 +1,504 @@
+.bwWrapper {
+    position:relative;
+    display:block;
+}
+
+.page-wrap
+{
+	background: #fff;
+	margin-bottom: 30px;
+	margin-top: 30px;
+        .box-shadow(0 0 20px rgba(0,0,0,0.1));
+	padding-top: 30px;
+}
+.intro-slogan
+{
+	color: #fff;
+	font-size: 5em;
+	line-height: 1em;
+	margin-bottom: 60px;
+	margin-left: 30px;
+	margin-right: -30px;
+	margin-top: 30px;
+	text-shadow: 3px 3px 0 rgba(0,0,0,0.5);
+	padding: 60px;
+	position: relative;
+	text-transform: uppercase;
+
+
+
+
+        @media (max-width: 767px)
+	{
+		font-size: 3em;
+		margin-left: 20px;
+		margin-right: -10px;
+		padding: 30px;
+                
+                &:after
+                {
+                        border-right: 10px solid transparent;
+                        border-top: 10px solid #303D36;
+                        bottom: -10px;
+                        content: "";
+                        display: block;
+                        height: 0;
+                        position: absolute;
+                        right: 0;
+                        width: 0;
+                }
+
+
+	}
+
+        big {
+
+            font-size: 120%;
+
+        }
+
+        &:after
+        {
+        	border-right: 30px solid transparent;
+                border-top: 30px solid #753C07;
+                bottom: -30px;
+                content: "";
+                display: block;
+                height: 0;
+                position: absolute;
+                right: 0;
+                width: 0;
+        }
+
+}
+
+.vcard-wrap
+{
+	background: #eee;
+	.box-shadow(0px 0px 3px rgba(0,0,0,0.2));
+	margin-bottom: 40px;
+	margin-left: 30px;
+	padding-top: 20px;
+}
+
+.vcard {
+
+    .vcard-photo
+    {
+            background: #fff;
+            .box-shadow(0px 0px 3px rgba(0,0,0,0.2));
+            margin: 0 20px;
+            padding: 10px;
+
+            img
+            {
+                    width: 100%;
+            }
+
+    }
+    .vcard-bio
+    {
+            padding: 30px;
+            padding-top: 0;
+
+            blockquote {
+                position: relative;
+                color: darken(@gradientColor, 40%);
+                font-family: @serifFontFamily;
+
+                &:before {
+                    color: darken(@gradientColor, 40%);
+                    display: block;
+                    content: "\201C";
+                    font-size: 400%;
+                    position: absolute;
+                    left: -20px;
+                    top: 13px;
+                }
+
+                p
+                {
+                    
+                    font-size: 150%;
+
+                }
+            }
+
+            .vcard-name
+            {
+                    margin-bottom: 0;
+                    margin-top: 20px;
+                    text-align: center;
+            }
+            .vcard-info
+            {
+            }
+            .vcard-info i
+            {
+                    margin-right: 10px;
+                    text-align: center;
+                    width: 10px;
+            }
+
+    }
+
+}
+
+
+.skill-item
+{
+	margin-bottom: 10px;
+}
+.progress
+{
+	height: 30px;
+	margin-bottom: 0;
+
+        .bar
+        {
+            height: 30px;
+            line-height: 30px;
+            moz-text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+            text-align: left;
+            text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+            webkit-text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+
+            i
+            {
+                padding: 0 10px;
+            }
+
+        }
+
+}
+
+.main-wrap
+{
+
+
+    .section 
+    {
+
+        padding: 0 60px 40px 60px;
+
+        hr
+        {
+                margin: 40px 0;
+        }
+        h3
+        {
+            color: #fff;
+            margin-bottom: 40px;
+            margin-right: -75px;
+            moz-text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+            padding: 5px 0;
+            padding-left: 15px;
+            padding-top: 10px !important;
+            position: relative;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+            webkit-text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+
+            &:after {
+                border-right: 15px solid transparent;
+                border-top: 15px solid #003063;
+                bottom: -15px;
+                content: "";
+                display: block;
+                height: 0;
+                position: absolute;
+                right: 0;
+                width: 0;
+            }
+
+            i
+            {
+                font-size: 0.8em;
+                font-weight: 100;
+                margin-right: 15px;
+            }
+
+        }
+
+        @media (max-width: 767px)
+        {
+                padding: 0 30px 40px 30px;
+
+                & h3
+                {
+                        margin-left: 0;
+                        margin-right: -40px;
+                        text-align: center;
+                        i {
+                            margin-left: -40px;
+                        }
+
+                        &:after
+                        {
+                            border-right: 10px solid transparent;
+                            border-top: 10px solid #3C3542;
+                            bottom: -10px;
+                            content: "";
+                            display: block;
+                            height: 0;
+                            position: absolute;
+                            right: 0;
+                            width: 0;
+                        }
+
+                }
+        }
+    }
+
+    .section-blog .section-blog-item
+    {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+
+        &.last-blog-item
+        {
+                border-bottom: none;
+                padding-bottom: 0;
+        }
+
+
+       .blog-item-thumbnail .blog-item-thumbnail-wrap
+        {
+                background: #fff;
+                .box-shadow(0px 0px 3px rgba(0,0,0,0.2));
+                padding: 10px;
+
+                img
+                {
+                        width: 100%;
+                }
+
+        }
+
+        .blog-item-excerpt
+        {
+
+            h4
+            {
+                    font-size: 1.4em;
+
+                    a
+                    {
+                            color: #333;
+                    }
+
+                    @media(max-width: 767px)
+                    {
+                        margin: 20px 0;
+                    }
+
+            }
+            p
+            {
+                    font-size: 0.9em;
+            }
+
+            .blog-item-meta
+            {
+                    margin-bottom: 10px;
+
+                    span
+                    {
+                            font-weight: bold;
+                            margin-right: 20px;
+
+                            i
+                            {
+                                    margin-right: 5px;
+                            }
+
+                    }
+
+            }
+
+
+
+        }
+
+
+    }
+
+    .section-education .section-education-list .education-item, .section-work .section-work-list .work-item
+    {
+
+        font-size: 0.9em;
+	margin-bottom: 40px;
+
+    }
+
+    .section-portfolio
+    {
+            .section-portfolio-row-wrap 
+            {
+                .portfolio-item-thumbnail   
+                {
+                    margin-bottom: 20px;
+
+                    .portfolio-item-thumbnail-wrap
+                    {
+                            background: #fff;
+                            .box-shadow(0px 0px 3px rgba(0,0,0,0.2));
+                            padding: 10px;
+
+                            img
+                            {
+                                    width: 100%;
+                            }
+
+                    }
+
+
+                }
+
+            }
+
+    }
+
+    .section-first h3
+    {
+            margin-top: 0;
+    }
+    .section-last hr
+    {
+            background: transparent;
+            border: 1px solid #fff;
+    }
+
+
+    .section-work-list h4, .section-education-list h4
+    {
+            margin-top: 0;
+            i 
+            {
+                margin-right: 10px;
+            }
+            small {
+
+                font-size: 0.6em;
+                font-style: italic;
+
+            }
+
+    }
+
+
+}
+
+
+
+.embed-container
+{
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+
+        iframe, object, embed, video {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+}
+
+
+
+.footer 
+{
+    .row
+    {
+            border-top: 1px solid #eee;
+            text-align: right;
+    }
+
+    p
+    {
+            color: #6c6c6c;
+            font-style: italic;
+            margin: 20px 30px;
+    }
+
+}
+
+@media (max-width: 767px)
+{
+	.vcard-wrap
+	{
+		margin-left: 0;
+	}
+
+}
+.mirror-mode .intro-slogan
+{
+	margin-left: -60px !important;
+	margin-right: 60px !important;
+	text-align: right;
+}
+.mirror-mode .intro-slogan:after
+{
+	border-left: 30px solid transparent !important;
+	border-right: 0 !important;
+	left: 0 !important;
+}
+.mirror-mode .vcard-wrap
+{
+	margin-left: -30px !important;
+	margin-right: 60px !important;
+}
+.mirror-mode .main-wrap .section
+{
+	padding: 0 60px 40px 60px;
+}
+.mirror-mode .main-wrap .section h3
+{
+	margin-left: -75px !important;
+	margin-right: 0 !important;
+	padding-left: 80px !important;
+}
+.mirror-mode .main-wrap .section h3:after
+{
+	border-left: 15px solid transparent !important;
+	border-right: 0 !important;
+	left: 0 !important;
+}
+@media (max-width: 767px)
+{
+	.mirror-mode .vcard-wrap
+	{
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+	.mirror-mode .intro-slogan
+	{
+		margin-left: -10px !important;
+		margin-right: 20px !important;
+		padding: 30px;
+	}
+	.mirror-mode .intro-slogan:after
+	{
+		border-left: 10px solid transparent !important;
+		left: 0 !important;
+	}
+	.mirror-mode .main-wrap .section
+	{
+		padding: 0 30px 40px 30px;
+	}
+	.mirror-mode .main-wrap .section h3
+	{
+		margin-left: 0;
+		margin-left: -40px !important;
+		text-align: center;
+	}
+	.mirror-mode .main-wrap .section h3:after
+	{
+		border-left: 10px solid transparent !important;
+		border-right: 0 !important;
+	}
+}

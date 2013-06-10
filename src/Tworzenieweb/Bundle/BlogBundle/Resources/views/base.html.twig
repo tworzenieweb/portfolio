@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>{% block title %}Luke Adamczewski - Personal Home Page{% endblock %}</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+                
+                {% block stylesheets %}
+        
+                    {% stylesheets
+                        '@TworzeniewebBlogBundle/Resources/public/less/bootstrap.less'
+                        '@TworzeniewebBlogBundle/Resources/public/js/prettyphoto/css/prettyPhoto.css'
+                        '@TworzeniewebBlogBundle/Resources/public/js/flexslider/flexslider.css'
+                    output='css/all.css' %}
+                        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen" />
+                    {% endstylesheets %}
+
+                {% endblock %}
+                
+		<script src="http://use.edgefonts.net/squada-one:n4.js"></script>
+		<script src="http://use.edgefonts.net/bebas-neue:n4.js"></script>
+		
+	</head>
+  
+	<body class="mirror-mode">
+
+	<div class="container">
+		<div class="row page-wrap">
+		<div class="span12">
+			<h4 class="intro-slogan css3-gradient">
+                            <a href="{{ path('tworzenieweb_blog_homepage') }}"><big><span style="color:#ddd;">&lt;?PHP</span><br />Experienced Developer</big><br /><span style="color:#ddd;"># Check my skills</span></a>
+                        </h4>
+		</div>
+		<!-- begin .vcard -->
+			<div class="span4 vcard pull-right">
+				<div class="vcard-wrap">
+				<!-- begin .vcard-photo -->
+				<div class="vcard-photo">				
+					<img class="lazy" src="{{ asset('bundles/tworzeniewebblog/images/grey.gif') }}" 
+                                             data-original="{{ asset('bundles/tworzeniewebblog/images/photo.jpg') }}" />
+				</div>
+				<!-- end .vcard-photo -->
+				
+				<!-- begin .vcard-bio -->
+				<div class="vcard-bio">
+                                    {% block vcard %}
+                                        <h3 class="vcard-name">Luke Adamczewski<br /><small>M.Sc. Eng.</small></h3>
+                                        <hr />
+                                        
+                                        <blockquote>
+                                        <p>I specialize in PHP Web Programming especially in conjunction with HTML5, CSS, Javascript and LESS.</p>
+                                        </blockquote>
+					
+					<p>I'm a developer with thorough understanding of concepts behind web applications. 
+                                        During my <strong>7</strong> years of experience on IT field I have achieved many goals and successful projects.
+					Currently I'm keen on Symfony2 framework which is using on daily basis at work.
+					</p>
+					
+                                        <p>Below is the list of technologies that I've used for at least one project.</p>
+                                        <div class="skills">
+                                            
+                                            {% set tags = [
+'PHP','Symfony2','Symfony1.x','Doctrine2','Doctrine','Propel','Twig','Smarty','MySQL','Zend Framework 1.x','MongoDB','AJAX','JavaScript','jQuery','CSS3','PHPUnit',
+'IoC','MVC','Responsive Design','REST','SOA','Java EE','Java EE','GIT','SVN','Python','Web2Py','Django','Kohana','Wordpress','Joomla', 'Twitter Bootstrap'] %}                                                                                        
+                                           
+                                            {% for tag in tags %}
+                                            <a href="http://www.google.com/search?q={{ tag }}" class="label" rel="no-follow">{{ tag }}</a> 
+                                            {% endfor %}
+                                            
+                                        </div>
+                                        
+					<hr>
+					<span class="vcard-info"><i class="icon-phone-sign"></i>(+48) 692382466</span><br />
+					<span class="vcard-info"><i class="icon-envelope"></i><a href="mailto:lukasz.adamczewski@phpe.pl">luke.adamczewski@phpe.pl</a></span><br />
+					<span class="vcard-info"><i class="icon-github"></i><a href="https://github.com/tworzenieweb">Github account</a></span><br />
+					<span class="vcard-info"><i class="icon-twitter-sign"></i><a href="https://twitter.com/tworzenieweb">Twitter account</a></span><br />
+					<span class="vcard-info"><i class="icon-linkedin"></i><a href="http://www.linkedin.com/in/lukaszadamczewski">Linkedin account</a></span>
+					<!-- end info -->
+					{% endblock %}
+				</div>
+				<!-- end .vcard-bio -->
+				</div>
+			</div>
+		<!-- end .vcard -->
+		
+		<!-- begin .main-wrap -->
+			<div class="span8 main-wrap pull-left">		
+					
+				{% block content %}
+                                {% endblock %}
+				
+			</div>
+		<!-- end .main-wrap -->
+		
+		<!-- start .footer -->
+			<div class="span12 footer">
+				<div class="row">
+                                    {% block footer %}
+                                    {% endblock %}
+				
+				</div>
+			</div>
+		<!-- end .footer -->
+		</div>
+	</div>	
+	
+            {% block foot_script %}
+                <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+                {% javascripts
+                    '../vendor/twitter/bootstrap/js/bootstrap-tooltip.js'
+                    '../vendor/twitter/bootstrap/js/bootstrap-scrollspy.js'
+                    '@TworzeniewebBlogBundle/Resources/public/js/prettyphoto/js/jquery.prettyPhoto.js'
+                    '@TworzeniewebBlogBundle/Resources/public/js/jquery.lazyload.min.js'
+                    '@TworzeniewebBlogBundle/Resources/public/js/default.js'
+                    '@TworzeniewebBlogBundle/Resources/public/js/hinclude.js'
+                    '@TworzeniewebBlogBundle/Resources/public/js/easing.js'
+                    '@TworzeniewebBlogBundle/Resources/public/js/flexslider/jquery.flexslider-min.js'
+                    output='js/all.js' %}
+                    <script type="text/javascript" src="{{ asset_url }}"></script>
+                {% endjavascripts %}
+            {% endblock %}
+	
+	
+	</body>
+  
+</html>

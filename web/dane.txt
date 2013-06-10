@@ -1,0 +1,7 @@
+baza: baza39_miodzio
+
+user: admin39_miodzio
+
+hasło: miodzio.123
+
+host: 21639.m.tld.pl 
