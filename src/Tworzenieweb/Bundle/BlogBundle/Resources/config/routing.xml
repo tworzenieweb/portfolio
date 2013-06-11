@@ -7,4 +7,8 @@
     <route id="tworzenieweb_blog_homepage" pattern="/">
         <default key="_controller">TworzeniewebBlogBundle:Default:index</default>
     </route>
+    
+    <route id="tworzenieweb_blog_subdomain" pattern="/" host="blog.phpe.pl">
+        <default key="_controller">ApplicationSonataNewsBundle:Post:archive</default>
+    </route>
 </routes>
