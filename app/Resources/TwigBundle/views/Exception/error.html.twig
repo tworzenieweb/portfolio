@@ -1,0 +1,16 @@
+{% extends 'TworzeniewebBlogBundle::base.html.twig' %}
+
+
+{% block content %}
+
+    <!-- begin .section-work -->
+    <div class="section section-work section-first row">
+            <h3 class="css3-gradient-2" id="employment-history"><i class="icon-ambulance"></i>{{ status_code }} {{ status_text }}</h3>
+
+                    <div class="section-work-list row-fluid">
+                        <h4>The server returned a "{{ status_code }} {{ status_text }}".</h4>
+                        <p>The page that you requested cannot be displayed. Please contact with site admin if you have sure that page was valid previously.</p>
+                    </div>	
+    </div>
+
+{% endblock %}

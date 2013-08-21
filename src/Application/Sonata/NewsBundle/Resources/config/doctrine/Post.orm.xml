@@ -16,6 +16,8 @@
         <id name="id" type="integer" column="id">
             <generator strategy="AUTO"/>
         </id>
+        
+        <field name="pageViews" type="integer" column="page_views"></field>
 
         <many-to-one
     field="image"

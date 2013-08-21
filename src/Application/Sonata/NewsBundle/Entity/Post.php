@@ -27,6 +27,8 @@ class Post extends BasePost
      * @var integer $id
      */
     protected $id;
+    
+    protected $pageViews = 0;
 
     /**
      * Get id
@@ -68,4 +70,28 @@ class Post extends BasePost
         return $this->image;
     }
 
+    
+
+    /**
+     * Set pageViews
+     *
+     * @param integer $pageViews
+     * @return Post
+     */
+    public function setPageViews($pageViews)
+    {
+        $this->pageViews = $pageViews;
+
+        return $this;
+    }
+
+    /**
+     * Get pageViews
+     *
+     * @return integer 
+     */
+    public function getPageViews()
+    {
+        return $this->pageViews;
+    }
 }

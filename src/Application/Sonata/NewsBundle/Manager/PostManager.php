@@ -46,4 +46,14 @@ class PostManager extends BasePostManager
             ->getOneOrNullResult();
     }
     
+    /**
+     * Increase post page views
+     * @param \Application\Sonata\NewsBundle\Entity\Post $post
+     */
+    public function updatePostPageViews(Post $post)
+    {
+        $post->setPageViews($post->getPageViews()+1);
+        $this->save($post);
+    }
+    
 }
